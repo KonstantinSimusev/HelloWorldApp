@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabelSettings()
-        setButtonSettings()
+        helloWorldLabel.isHidden = true
+        helloWorldLabel.textColor = .systemPink
+        startButton.layer.cornerRadius = 15
     }
 
     @IBAction func startPressed() {
@@ -26,17 +27,5 @@ class ViewController: UIViewController {
             startButton.setTitle("Hide text", for: .normal)
         }
     }
-    
-    private func setLabelSettings() {
-        helloWorldLabel.isHidden = true
-        helloWorldLabel.textColor = .systemPink
-    }
-    
-    private func setButtonSettings() {
-        startButton.setTitle("Start the game", for: .normal)
-        startButton.layer.cornerRadius = 13
-        
-    }
-    
 }
 
